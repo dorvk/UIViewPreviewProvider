@@ -84,7 +84,7 @@ extension UIViewPreviewProvider {
     }
     
     /// Converts a Preview to a SwiftUI View
-    static func swiftUIView(from preview: Preview, scheme colorScheme: ColorScheme) -> some View {
+    static func swiftUIView(from preview: Preview, scheme colorScheme: ColorScheme) -> some SwiftUI.View {
         
         let size = self.size(for: preview)
 
@@ -103,7 +103,7 @@ extension UIViewPreviewProvider {
     }
     
     /// Allows us to automatically conform to `PreviewProvider`
-    public static var previews: some View {
+    public static var previews: some SwiftUI.View {
         
         let identifiablePreviews = uiPreviews.map {
             IdentifiableBox($0)
